@@ -1,0 +1,130 @@
+.card {
+    --color1: #af40ff;
+    --color2: #5b42f3;
+    --color3: #00ddeb;
+    max-width: 350px;
+    box-sizing: border-box;
+    height: 100px;
+    width: 450px;
+    border-radius: 12px;
+    padding: 12px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+
+}
+
+
+.image {
+    position: absolute;
+    height: 100px;
+    object-fit: cover;
+    top: -20%;
+    left: 50%;
+
+    transform: translateX(-200%) rotate(45deg);
+    transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+    transition-duration: 1s;
+}
+
+.heading {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 900;
+
+    background: linear-gradient(144deg,
+            var(--color1),
+            var(--color2),
+            var(--color3));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.icons {
+    display: flex;
+    gap: 30px;
+}
+
+.icons button {
+    padding: 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: double 2px transparent;
+    background-image: linear-gradient(white, white),
+        linear-gradient(144deg, var(--color1), var(--color2), var(--color3));
+    background-clip: padding-box, border-box;
+    background-origin: border-box;
+    transition-timing-function: cubic-bezier(0.64, 0.57, 0.67, 1.53);
+    transition-duration: 0.3s;
+    cursor: pointer;
+}
+
+.icons button:hover {
+    border-radius: 40px;
+}
+
+.icons .tiktok {
+    color: var(--color1);
+}
+
+.icons .zalo {
+    color: var(--color2);
+}
+
+.icons .gmail {
+    color: var(--color3);
+}
+
+
+.card:hover::before,
+.card:hover::after {
+    box-shadow: 0 2px 14px rgba(0, 0, 0, 0.4);
+}
+
+.card:hover .image {
+    animation: animate 2s linear infinite alternate;
+}
+
+@keyframes animate {
+    0% {
+        transform: translateX(-200%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) rotate(-45deg);
+    }
+}
+
+/* book */
+/* From Uiverse.io by LilaRest */
+/* From Uiverse.io by joe-watson-sbf */
+.card1 {
+    width: 320px;
+    height: 254px;
+    border-radius: 4px;
+    background: pink;
+    display: flex;
+    gap: 10px;
+    padding: .3em;
+}
+
+.card1 p {
+    height: 100%;
+    flex: 1;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: all .5s;
+    background: white;
+    border: 1px solid #ff5a91;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

@@ -1,0 +1,22 @@
+body {
+    background-color: pink;
+    color: #fff;
+    text-align: center;
+    /* Flexbox để căn giữa */
+    display: flex;
+    justify-content: center;  /* Căn giữa theo chiều ngang */
+    align-items: flex-start;      /* Căn giữa theo chiều dọc */
+    height: 100vh;            /* Đảm bảo chiều cao của body là 100% chiều cao của cửa sổ */
+    margin: 0;
+    padding-top: 30px;
+}
+
+canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
